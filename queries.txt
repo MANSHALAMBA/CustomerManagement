@@ -1,0 +1,53 @@
+
+
+1. User details table create
+
+CREATE TABLE userdetails (
+  regid int(11) NOT NULL auto_increment,
+  name varchar(25),
+  email varchar(20),
+  address varchar(30),
+  contact varchar(15),
+  pwd varchar(15),
+  status varchar(10),
+  PRIMARY KEY  (regid)
+)
+
+
+alter table userdetails auto_increment=101;
+
+
+
+2.insert query for customer registration
+
+insert into userdetails(name,email,address,contact,pwd,status) values 
+(?,?,?,?,?,?);
+
+
+3.customer details delete query(Soft delete)
+
+update userdetails set status='inactive' where regid=?;
+
+
+4.Customer Login
+
+select regid,pwd from userdetails where regid=? and pwd=? and status='active';
+
+
+5.Customerdetails update
+
+update userdetails set name=?,email=?,address=?, contact=? where regid=?;
+
+Note-Password can't be updated. It's changed.
+
+
+6.Password change
+
+update userdetails set pwd=? where pwd=? and regid=?;
+
+
+7.Customer details view
+
+select regid,name,email,address,contact,status from userdetails; (For all customer details)
+
+select regid,name,email,address,contact,status from userdetails where regid=?; (For particular customer)

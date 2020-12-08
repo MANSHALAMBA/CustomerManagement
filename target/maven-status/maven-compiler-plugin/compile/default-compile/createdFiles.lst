@@ -1,0 +1,8 @@
+com/mavericks/dao/MainDao.class
+com/mavericks/controller/MainController.class
+com/mavericks/rootConfigure.class
+com/mavericks/webConfigure.class
+com/mavericks/model/Admin.class
+com/mavericks/service/MainService.class
+com/mavericks/model/Customer.class
+com/mavericks/Dispatcher.class
